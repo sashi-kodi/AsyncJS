@@ -1,0 +1,63 @@
+<!doctype>
+<html>
+<head>
+   <title>Async JS</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+    <body>
+    <script>
+//        window.onload= function(){
+//            var http=new XMLHttpRequest();   
+//            
+//            http.onreadystatechange = function(){
+//                if(http.readyState===4 && http.status==200){
+//                   console.log(JSON.parse(http.response)); 
+//                }
+//            }
+//            
+//            http.open("GET","./stud.json",true);
+//            http.send();
+//        };
+      
+        function get(url){
+            return new Promise(function(resolve,reject){
+                var http=new XMLHttpRequest();   
+             http.open("GET",url,true);
+            http.onreadystatechange = function(){
+                if(http.readyState===4){
+                    if(http.status===200){
+                        resolve(JSON.parse(http.response));
+                    }else{
+                        reject(http.statusText);
+                    }
+                } 
+                
+            };
+                http.onerror= function(){
+                    reject(http.statusText);
+                }
+            
+           
+            http.send();
+                
+                
+            });
+            
+        }
+        
+        
+        var promise=get("./stud.json");
+        promise.then(function(uidata){
+            console.log(uidata);
+            return get("./qastud.json");
+        })
+        .then(function(qadata){
+            console.log(qadata);
+        })
+        .catch(function(err){
+            console.log(err);
+        });
+        
+    </script>
+    </body>
+</html>

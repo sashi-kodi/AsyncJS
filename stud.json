@@ -1,0 +1,17 @@
+{
+"students":[
+{"name": "sashi",
+  "batch": "ui"
+},
+{"name": "kiran",
+  "batch": "ui"
+  },
+  {"name": "leela",
+  "batch": "ui"
+  },
+  {"name": "bavani",
+  "batch": "ui"
+  }
+]
+
+}

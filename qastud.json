@@ -1,0 +1,17 @@
+{
+"students":[
+{"name": "jaya",
+  "batch": "qa"
+},
+{"name": "harita",
+  "batch": "qa"
+  },
+  {"name": "sarita",
+  "batch": "qa"
+  },
+  {"name": "sahasra",
+  "batch": "qa"
+  }
+]
+
+}
