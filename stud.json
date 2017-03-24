@@ -1,16 +1,16 @@
 {
 "students":[
-{"name": "sashi",
-  "batch": "ui"
+{"name": "anne",
+  "batch": "pre"
 },
-{"name": "kiran",
-  "batch": "ui"
+{"name": "samy",
+  "batch": "pre"
   },
-  {"name": "leela",
-  "batch": "ui"
+  {"name": "bella",
+  "batch": "pre"
   },
-  {"name": "bavani",
-  "batch": "ui"
+  {"name": "isabella",
+  "batch": "pre"
   }
 ]
 
